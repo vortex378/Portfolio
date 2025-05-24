@@ -13,7 +13,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-beavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -32,6 +32,14 @@ body.dark-mode {
 
 body.dark-mode .navbar {
   background: var(--dark-bg);
+}
+
+body.dark-mode .nav-menu a {
+  color: white;
+}
+
+body.dark-mode .hamburger .line {
+  background: white;
 }
 
 /* Navbar */
@@ -165,7 +173,6 @@ body.dark-mode .navbar {
   text-align: center;
 }
 
-/* About Section */
 .about-content {
   max-width: 700px;
   margin: auto;
@@ -173,7 +180,6 @@ body.dark-mode .navbar {
   line-height: 1.8;
 }
 
-/* Projects Grid */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -209,7 +215,6 @@ body.dark-mode .navbar {
   transform: scale(1.05);
 }
 
-/* Contact Section */
 .contact-info {
   max-width: 600px;
   margin: auto;
@@ -242,7 +247,6 @@ body.dark-mode .navbar {
   color: #888;
 }
 
-/* Footer */
 .footer {
   text-align: center;
   padding: 2rem;
@@ -251,7 +255,6 @@ body.dark-mode .navbar {
   background: var(--secondary-color);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .nav-menu {
     position: absolute;
