@@ -1,15 +1,23 @@
-// Theme Toggle
+// Theme Toggle with Icon Swap
 const themeToggle = document.querySelector('.theme-toggle');
 const body = document.body;
 
-// Check for saved theme
 if (localStorage.getItem('theme') === 'dark') {
   body.classList.add('dark-mode');
+  themeToggle.querySelector('i').classList.replace('fa-moon', 'fa-sun');
 }
 
 themeToggle.addEventListener('click', () => {
+  const icon = themeToggle.querySelector('i');
   body.classList.toggle('dark-mode');
   const isDark = body.classList.contains('dark-mode');
+  
+  if (isDark) {
+    icon.classList.replace('fa-moon', 'fa-sun');
+  } else {
+    icon.classList.replace('fa-sun', 'fa-moon');
+  }
+  
   localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
 
@@ -21,7 +29,6 @@ navToggle.addEventListener('change', () => {
   navMenu.classList.toggle('active');
 });
 
-// Close menu when link is clicked
 document.querySelectorAll('.nav-menu a').forEach(link => {
   link.addEventListener('click', () => {
     navToggle.checked = false;
